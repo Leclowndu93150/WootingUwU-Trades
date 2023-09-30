@@ -4,62 +4,119 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to UwU Trading.">
-	<main>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">UwU Trading</span></h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				pfp="https://cdn.discordapp.com/avatars/363664620583518210/a_934f82882dd494f9940ec6658ca38e60.gif"
-				title="Looking for Keycaps"
-				product="Wooting UwU Stealth RGB"
-				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-				contact="@Leclowndu93150"
-				/>
-		</ul>
-	</main>
+  <header>
+    <nav class="navbar">
+      <button onclick="window.location.href='#'">Home</button>
+      <button onclick="window.location.href='./howdoesitwork'">How does it work</button>
+      <button onclick="window.location.href='./contact'">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+      <defs>
+        <linearGradient
+          id="paint0_linear_1805_24383"
+          x1="247.358"
+          y1="0"
+          x2="247.358"
+          y2="622.479"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-opacity="0.9"></stop>
+          <stop offset="1" stop-opacity="0.2"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <h1>Welcome to <span class="text-gradient">UwU Trading</span></h1>
+
+    <ul role="list" class="link-card-grid">
+      <Card
+        pfp="https://cdn.discordapp.com/avatars/363664620583518210/a_934f82882dd494f9940ec6658ca38e60.gif"
+        title="Looking for Keycaps"
+        product="Wooting UwU Stealth RGB"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        contact="@Leclowndu93150"
+        Location="Paris, France"
+      />
+
+      <Card
+        pfp="https://cdn.discordapp.com/avatars/363664620583518210/a_934f82882dd494f9940ec6658ca38e60.gif"
+        title="Offering Keycaps"
+        product="Wooting UwU Stealth RGB"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        contact="@Leclowndu93150"
+        Location="Paris, France"
+      />
+
+      <Card
+        pfp="https://cdn.discordapp.com/avatars/363664620583518210/a_934f82882dd494f9940ec6658ca38e60.gif"
+        title="Offering Keycaps"
+        product="Wooting UwU Stealth RGB"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        contact="@Leclowndu93150"
+        Location="Paris, France"
+      />
+
+	  
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(33.333% - 2rem), 1fr)); /* Adjust the percentage and gap as needed */
+    gap: 2rem;
+    padding: 0;
+    margin: 0 -1rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem; /* Add some space below the navbar */
+  }
+
+  .navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar button:hover {
+    text-decoration: underline;
+  }
 </style>

@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+
+<Layout title="Welcome to UwU Trading.">
+
+	<header>
+		
+		<nav class="navbar">
+			<button onclick="window.location.href='..'">Home</button>
+			<button  onclick="window.location.href='/howdoesitwork/'">How does it work</button>
+			<button onclick="window.location.href='#'">This Page</button>
+		</nav>
+	</header>
+
+
+	<main> 
+			<defs>
+				<linearGradient
+					id="paint0_linear_1805_24383"
+					x1="247.358"
+					y1="0"
+					x2="247.358"
+					y2="622.479"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop stop-opacity="0.9"></stop>
+					<stop offset="1" stop-opacity="0.2"></stop>
+				</linearGradient>
+			</defs>
+		</svg>
+
+		<ul role="list" class="link-card-grid">
+            
+            <h2 class="plaintextlmao">Contact: @Leclowndu93150 on discord</h2>
+
+
+
+
+
+
+
+
+		</ul>
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Layout>
+
+<style>
+
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center; /* Center the items */
+    background-color: var(--accent); /* Use your preferred color */
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar button:hover {
+    text-decoration: underline;
+  }
+
+  .plaintextlmao{
+    text-align: center;
+  }
+
+</style>
+

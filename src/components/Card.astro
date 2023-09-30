@@ -6,9 +6,10 @@ interface Props {
 	product?: string;
 	pfp?: string;
 	contact?: string;
+	Location?: string;
 }
 
-const { href, title, body, product,	pfp, contact } = Astro.props;
+const { href, title, body, product,	pfp, contact,Location } = Astro.props;
 ---
 
 <li class="link-card">
@@ -18,13 +19,13 @@ const { href, title, body, product,	pfp, contact } = Astro.props;
 	<a href={href}>
 		<h2>
 			{title}
-			<span>&rarr;</span>
 		</h2>
 		<h3>Product: {product}</h3>
 		<p>
 			{body}
 		</p>
 		<p>Contact: {contact}</p>
+		<p>Location: {Location}</p>
 	</a>
 </li>
 <style>
@@ -65,5 +66,9 @@ const { href, title, body, product,	pfp, contact } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
+	}
+
+	.card-image{
+		border-radius: 50%;
 	}
 </style>
