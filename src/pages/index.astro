@@ -8,6 +8,7 @@ import Card from '../components/Card.astro';
     <nav class="navbar">
       <button onclick="window.location.href='#'">Home</button>
       <button onclick="window.location.href='./howdoesitwork'">How does it work</button>
+      <button onclick="window.location.href='/allkeys/'">All Keys</button>
       <button onclick="window.location.href='./contact'">Contact</button>
     </nav>
   </header>
@@ -57,8 +58,6 @@ import Card from '../components/Card.astro';
         contact="@Leclowndu93150"
         Location="Paris, France"
       />
-
-	  
     </ul>
   </main>
 </Layout>
@@ -67,7 +66,6 @@ import Card from '../components/Card.astro';
   main {
     margin: auto;
     padding: 1rem;
-    width: 100%;
     max-width: 1200px;
     color: white;
     font-size: 20px;
@@ -92,7 +90,7 @@ import Card from '../components/Card.astro';
 
   .link-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(calc(33.333% - 2rem), 1fr)); /* Adjust the percentage and gap as needed */
+    grid-template-columns: repeat(auto-fit, minmax(calc(33.333% - 2rem), 1fr));
     gap: 2rem;
     padding: 0;
     margin: 0 -1rem;
@@ -104,7 +102,7 @@ import Card from '../components/Card.astro';
     background-color: var(--accent);
     padding: 1rem;
     text-align: center;
-    margin-bottom: 2rem; /* Add some space below the navbar */
+    margin-bottom: 2rem;
   }
 
   .navbar button {
@@ -118,5 +116,16 @@ import Card from '../components/Card.astro';
 
   .navbar button:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .link-card-grid {
+      grid-template-columns: 1fr;
+      margin: 0; /* Remove negative margin */
+    }
+
+    .link-card-grid > * {
+      margin-bottom: 2rem; /* Add some spacing between cards on mobile */
+    }
   }
 </style>

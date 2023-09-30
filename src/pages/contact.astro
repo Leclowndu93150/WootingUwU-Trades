@@ -11,6 +11,7 @@ import Card from '../components/Card.astro';
 		<nav class="navbar">
 			<button onclick="window.location.href='..'">Home</button>
 			<button  onclick="window.location.href='/howdoesitwork/'">How does it work</button>
+            <button  onclick="window.location.href='/allkeys/'">All Keys</button>
 			<button onclick="window.location.href='#'">This Page</button>
 		</nav>
 	</header>
@@ -88,13 +89,6 @@ import Card from '../components/Card.astro';
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-  }
-
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
   }
 
   .navbar {
