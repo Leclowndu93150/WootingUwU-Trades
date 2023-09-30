@@ -1,22 +1,30 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+	title?: string;
+	body?: string;
+	href?: string;
+	product?: string;
+	pfp?: string;
+	contact?: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, product,	pfp, contact } = Astro.props;
 ---
 
 <li class="link-card">
+	<div class="image-container">
+		<img src={pfp} alt={contact} height=100 width=100 class="card-image"/>
+	  </div>
 	<a href={href}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
 		</h2>
+		<h3>Product: {product}</h3>
 		<p>
 			{body}
 		</p>
+		<p>Contact: {contact}</p>
 	</a>
 </li>
 <style>
